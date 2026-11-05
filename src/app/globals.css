@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brand-bg text-brand-ink font-sans antialiased;
+}
+
+::selection {
+  @apply bg-brand-green/40 text-brand-ink;
+}
+
+/*Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #9cc6a5;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6da878;
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-green/40;
+  }
+  .btn-primary {
+    @apply btn bg-brand-green text-brand-ink shadow-soft hover:-translate-y-0.5 hover:shadow-lg hover:brightness-105 active:translate-y-0;
+  }
+  .btn-secondary {
+    @apply btn border-2 border-brand-ink/10 bg-white text-brand-ink hover:border-brand-green/60 hover:bg-brand-mint;
+  }
+  .btn-ghost-light {
+    @apply btn bg-white/15 text-white backdrop-blur hover:bg-white/25 border border-white/30;
+  }
+  .card {
+    @apply rounded-4xl bg-white shadow-card ring-1 ring-brand-ink/5;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium;
+  }
+  .input {
+    @apply w-full rounded-2xl border border-brand-ink/10 bg-white px-4 py-3 text-brand-ink placeholder:text-brand-muted/70 focus:border-brand-green focus:outline-none focus:ring-4 focus:ring-brand-green/20 transition;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-semibold text-brand-ink;
+  }
+}
+
+/* Organic blob decoration */
+.blob {
+  border-radius: 60% 40% 55% 45% / 55% 50% 50% 45%;
+}
+.blob-alt {
+  border-radius: 40% 60% 45% 55% / 50% 45% 55% 50%;
+}
+
+/* Dotted texture background */
+.dot-grid {
+  background-image: radial-gradient(rgba(36, 51, 41, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Marquee pause on hover */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
