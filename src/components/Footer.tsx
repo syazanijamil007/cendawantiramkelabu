@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
-  Sprout,
   Facebook,
   Instagram,
   Music2,
@@ -26,9 +26,13 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <Link href="/" className="flex items-center gap-2.5">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-green text-brand-ink">
-              <Sprout className="h-6 w-6" strokeWidth={2.2} />
-            </span>
+            <Image
+              src="/images/logo.jpg"
+              alt={`Logo ${siteConfig.name}`}
+              width={44}
+              height={44}
+              className="h-11 w-11 rounded-2xl object-cover"
+            />
             <span className="text-lg font-extrabold">{siteConfig.name}</span>
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-white/65">

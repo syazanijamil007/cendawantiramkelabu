@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sprout, Phone } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, Phone } from "lucide-react";
 import { siteConfig, whatsappContactLink } from "@/lib/config";
 
 const navLinks = [
@@ -52,9 +53,14 @@ export default function Navbar() {
     >
       <nav className="container-x flex items-center justify-between py-3" aria-label="Navigasi utama">
         <Link href="/" className="group flex items-center gap-2.5" aria-label={siteConfig.name}>
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-green text-brand-ink shadow-soft transition-transform group-hover:scale-105">
-            <Sprout className="h-6 w-6" strokeWidth={2.2} />
-          </span>
+          <Image
+            src="/images/logo.jpg"
+            alt={`Logo ${siteConfig.name}`}
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-2xl object-cover shadow-soft"
+            priority
+          />
           <span className="leading-tight">
             <span className="block text-lg font-extrabold tracking-tight text-brand-ink">
               {siteConfig.name}
