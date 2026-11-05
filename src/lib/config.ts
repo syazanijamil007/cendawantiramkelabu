@@ -19,12 +19,12 @@ export const siteConfig = {
 
   /** Nombor WhatsApp dalam format antarabangsa tanpa "+", "+", atau ruang.
    *  Contoh Malaysia: "60123456789". Gantikan dengan nombor sebenar. */
-  whatsapp: "60123456789",
-  whatsappDisplay: "+60 12-345 6789",
+  whatsapp: "60199581262",
+  whatsappDisplay: "+60 19-958 1262",
 
   /** Emel perniagaan */
   email: "hello@cendawansegar.com",
-  phoneDisplay: "+60 12-345 6789",
+  phoneDisplay: "+60 19-958 1262",
 
   /** Alamat perniagaan (placeholder — kemas kini dengan alamat sebenar) */
   address: {

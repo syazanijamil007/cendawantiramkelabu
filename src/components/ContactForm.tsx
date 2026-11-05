@@ -148,7 +148,7 @@ export default function ContactForm() {
             id="cf-phone"
             type="tel"
             className={`input ${errors.phone ? "border-red-400" : ""}`}
-            placeholder="+60 12-345 6789"
+            placeholder="+60 19-958 1262"
             value={form.phone}
             onChange={set("phone")}
           />
